@@ -23,14 +23,14 @@ namespace RFID {
   int numCardFunctions = 0;
 
 
-  void addCardFunction(MFRC522& mfrc522, uint32_t cardId, FunctionPtr function) {
+  void addCardFunction( uint32_t cardId, FunctionPtr function) {
     // Realoca o array para comportar mais uma associação de cartão e função
     cardFunctions = (CardFunction*)realloc(cardFunctions, (numCardFunctions + 1) * sizeof(CardFunction));
     cardFunctions[numCardFunctions] = {cardId, function, function};
     numCardFunctions++;
 }
 
-void addCardTwoFunctions(MFRC522& mfrc522, uint32_t cardId, FunctionPtr function1, FunctionPtr function2) {
+void addCardTwoFunctions( uint32_t cardId, FunctionPtr function1, FunctionPtr function2) {
     // Realoca o array para comportar mais uma associação de cartão e funções
     cardFunctions = (CardFunction*)realloc(cardFunctions, (numCardFunctions + 1) * sizeof(CardFunction));
     cardFunctions[numCardFunctions] = {cardId, function1, function2};
