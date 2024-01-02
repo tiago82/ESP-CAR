@@ -8,10 +8,13 @@
 namespace RFID {
   typedef void (*FunctionPtr)();
 
+  // Estrutura para associar um ID de cartão a duas funções
   struct CardFunction {
     uint32_t cardId;
-    FunctionPtr function;
+    FunctionPtr function1;
+    FunctionPtr function2;
   };
+
 
   void addCardFunction(MFRC522& mfrc522, uint32_t cardId, FunctionPtr function);
   void checkRFIDPresent(MFRC522& mfrc522);
