@@ -29,6 +29,7 @@ void setup() {
   // Adiciona associações de cartões e funções ao módulo RFID
   RFID::addCardFunction(0x10602403, funcao1); // Associa o cartão 0xA6085DE3 à função funcao1
   RFID::addCardTwoFunctions(0x104A4913,  funcao2,  funcao3); // possibilidade de um cartao alternar entre duas funcoes. 
+  // Mais associações de cartões...
 }
 
 void loop() {
