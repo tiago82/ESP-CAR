@@ -27,6 +27,16 @@ Adiciona uma associação entre um cartão RFID, um ID de cartão e uma função
 - `uint32_t cardId`: Identificador único do cartão RFID.
 - `FunctionPtr function`: Ponteiro para a função a ser associada ao cartão.
 
+### `addCardTwoFunctions`
+
+Adiciona uma associação entre um cartão RFID, um ID de cartão e duas funções, permitindo alternar entre elas.
+
+**Parâmetros:**
+- `MFRC522& mfrc522`: Referência para o objeto MFRC522.
+- `uint32_t cardId`: Identificador único do cartão RFID.
+- `FunctionPtr function1`: Ponteiro para a primeira função associada ao cartão.
+- `FunctionPtr function2`: Ponteiro para a segunda função associada ao cartão.
+
 ### `checkRFIDPresent`
 
 Verifica se um cartão RFID está presente e executa as funções associadas, alternando entre elas.

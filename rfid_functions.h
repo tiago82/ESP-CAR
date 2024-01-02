@@ -17,6 +17,7 @@ namespace RFID {
 
 
   void addCardFunction(MFRC522& mfrc522, uint32_t cardId, FunctionPtr function);
+  void addCardTwoFunctions(MFRC522& mfrc522, uint32_t cardId, FunctionPtr function1, FunctionPtr function2);
   void checkRFIDPresent(MFRC522& mfrc522);
 }
 
