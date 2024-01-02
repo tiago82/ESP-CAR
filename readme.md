@@ -76,8 +76,8 @@ void setup() {
   Serial.println(F("Aproxime o cartão RFID para executar uma função."));
 
   // Adiciona associações de cartões e funções ao módulo RFID
-  RFID::addCardFunction(mfrc522, 0xA6085DE3, funcao1); // Associa o cartão 0xA6085DE3 à função funcao1
-  RFID::addCardTwoFunctions(mfrc522, 0x104A4913,  funcao2,  funcao3); // possibilidade de um cartao alternar entre duas funcoes. 
+  RFID::addCardFunction(0xA6085DE3, funcao1); // Associa o cartão 0xA6085DE3 à função funcao1
+  RFID::addCardTwoFunctions(0x104A4913,  funcao2,  funcao3); // possibilidade de um cartao alternar entre duas funcoes. 
 }
 
 void loop() {
