@@ -1,3 +1,19 @@
+/*
+  Projeto: Funções RFID
+  Descrição:  Essa biblioteca facilita para associar cartões RFID a funções específicas.
+  Autor: tiago82
+  Data de Criação: 2023
+  Última Atualização: 2024/01/01
+  Versão: 2.0
+*/
+
+#include <SPI.h>
+#include <MFRC522.h>
+#include "rfid_functions.h"
+
+// Restante do seu código...
+
+
 #include "rfid_functions.h"
 #include <Arduino.h>
 
