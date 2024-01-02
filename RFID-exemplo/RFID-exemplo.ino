@@ -19,7 +19,6 @@ void funcao3() {
   Serial.println(F("Executando Função 3"));
 }
 
-
 void setup() {
   Serial.begin(9600); // Inicializa a comunicação serial com a taxa de 9600 bps
   SPI.begin(); // Inicializa a biblioteca SPI para comunicação com o módulo RFID
@@ -30,7 +29,7 @@ void setup() {
   // Adiciona associações de cartões e funções ao módulo RFID
   RFID::addCardFunction(mfrc522, 0xA6085DE3, funcao1); // Associa o cartão 0xA6085DE3 à função funcao1
   RFID::addCardFunction(mfrc522, 0xA8560943, funcao2); // Associa o cartão 0xA8560943 à função funcao2
-  RFID::addCardTwoFunctions(mfrc522, 0x104A4913,  funcao2,  funcao3); // possibilidade de um cartao alternar entre duas funcoes 
+  RFID::addCardTwoFunctions(mfrc522, 0x104A4913,  funcao2,  funcao3); // possibilidade de um cartao alternar entre duas funcoes. 
 }
 
 void loop() {
